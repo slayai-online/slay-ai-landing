@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SLAY AI - Bold &amp; Funky Maximalism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Material+Icons&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00ddff", // Electric Blue
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#050505", // Deep Obsidian
+                        "hyper-red": "#FF006E",
+                        "sunshine-yellow": "#FFD60A",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                    animation: {
+                        'marquee': 'marquee 15s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'melt': 'melt 3s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        melt: {
+                            '0%': { filter: 'blur(0px)', transform: 'scaleY(1)' },
+                            '50%': { filter: 'blur(1px)', transform: 'scaleY(1.02)' },
+                            '100%': { filter: 'blur(0px)', transform: 'scaleY(1)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>.text-outline {
+            -webkit-text-stroke: 2px #00ddff;
+            color: transparent;
+        }
+        .text-outline-white {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+            color: transparent;
+        }
+        .brutalist-shadow {
+            box-shadow: 8px 8px 0px 0px #000;
+        }
+        .brutalist-shadow-primary {
+            box-shadow: 6px 6px 0px 0px #00ddff;
+        }
+        .brutalist-shadow-red {
+            box-shadow: 6px 6px 0px 0px #FF006E;
+        }.glitch-hover:hover {
+            animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            filter: drop-shadow(4px 4px 0px #FF006E) drop-shadow(-4px -4px 0px #00ddff);
+        }
+        @keyframes glitch-anim {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }.tilt-pos { transform: rotate(3deg); }
+        .tilt-neg { transform: rotate(-3deg); }
+        .tilt-radical { transform: rotate(-6deg); }.liquid-blob {
+            background: linear-gradient(45deg, #00ddff, #FF006E);
+            filter: blur(40px);
+            opacity: 0.6;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display overflow-x-hidden selection:bg-hyper-red selection:text-white">
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full liquid-blob animate-float"></div>
+<div class="absolute bottom-[10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-hyper-red/20 blur-[80px] animate-pulse"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#444 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div>
+<div class="relative z-10 w-full min-h-screen flex flex-col">
+<nav class="absolute top-0 left-0 p-6 z-50 mix-blend-difference">
+<h1 class="text-4xl font-black tracking-tighter italic">SLAY_AI<span class="text-primary">.</span></h1>
+</nav>
+<section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-20">
+<div class="absolute inset-0 flex flex-col justify-center opacity-30 select-none pointer-events-none">
+<div class="whitespace-nowrap overflow-hidden -rotate-2 scale-110">
+<div class="inline-block animate-marquee text-[12rem] md:text-[20rem] font-black leading-none text-outline uppercase">
+                        GET FLY — GET FLY — GET FLY — GET FLY — GET FLY — 
+                    </div>
+</div>
+<div class="whitespace-nowrap overflow-hidden rotate-1 mt-[-4rem] scale-110">
+<div class="inline-block animate-marquee text-[12rem] md:text-[20rem] font-black leading-none text-outline-white uppercase" style="animation-direction: reverse;">
+                        VIRTUAL DRIP — VIRTUAL DRIP — VIRTUAL DRIP — 
+                    </div>
+</div>
+</div>
+<div class="relative w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-4 flex flex-col items-center lg:items-start space-y-8 order-2 lg:order-1 pointer-events-auto">
+<div class="bg-sunshine-yellow text-black p-6 transform -rotate-3 brutalist-shadow-primary border-4 border-black max-w-xs hover:scale-105 transition-transform duration-200">
+<div class="flex items-center gap-2 border-b-2 border-black pb-2 mb-2 font-bold font-mono text-sm uppercase">
+<span class="material-icons text-base">warning</span>
+                            System Override
+                        </div>
+<p class="font-bold text-2xl leading-tight text-[#1A1A1D]">Stop Wasting Hours on 'What to Wear?' – Your <span class="text-[#00D4FF]">AI Twin</span> Finds Perfect Outfits from Nearby Stores. <span class="text-[#00D4FF]">Delivered Today.</span></p>
+</div><p class="mt-4 text-white font-medium text-lg leading-snug">Upload 1 photo → AI builds your digital twin → Instant try-ons from 500+ local brands → 1-hour delivery or pickup. No sizing drama, no waiting.</p>
+<a class="group relative px-10 py-5 bg-primary text-black font-black text-3xl uppercase tracking-widest border-4 border-white brutalist-shadow-red hover:-translate-y-2 transition-all duration-200 rotate-2 bg-[#FF006E] text-white magnetic-pull inline-block text-center" href="#signup">
+<span class="relative z-10">GET EARLY ACCESS</span>
+<div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity"></div>
+</a>
+</div>
+<div class="lg:col-span-4 relative h-[500px] flex items-center justify-center order-1 lg:order-2">
+<div class="relative w-full h-full group">
+<div class="absolute inset-4 bg-gradient-to-t from-primary to-hyper-red blur-3xl opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+<div class="relative w-full h-full flex items-center justify-center transform transition-transform duration-500 group-hover:scale-105">
+<img alt="High-fidelity 3D cyberpunk avatar couple in neon streetwear" class="w-full h-full object-cover rounded-2xl border-4 border-white/20 mask-image-gradient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJmA1y-t47aVSOwHygh-b-OCPtZk0bdBMehCXS-K26eYkVFTlnET9SdSIk6c-uoKUeT0zRAdXGGLF_TffBwwSiJ6AgKbTHKBz1ltY_oejvH87FyBuDzQzJCxHvFgQqQ-vKj0_KhEakR0e1NABdsrjdfwpesTCUxbHuDK4E5vSpLSY8OD68hHflBmZGEZ2SZdJKBIrz5VOaatYW95GXZ73LCqRbjgmwGfnyy8x_UzGL6RAA4hJsmXdLXqMk8waoO2DqnET2630RUc1F" style="clip-path: polygon(10% 0, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0 10%);"/>
+<div class="absolute bottom-10 left-[-20px] bg-black/90 backdrop-blur border border-primary p-3 rounded-lg rotate-3">
+<p class="text-xs text-primary font-mono mb-1">OUTFIT_ID: #88X2</p>
+<div class="w-32 h-2 bg-gray-800 rounded-full overflow-hidden">
+<div class="w-[70%] h-full bg-gradient-to-r from-hyper-red to-sunshine-yellow animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col items-end space-y-12 order-3">
+<div class="bg-black/80 backdrop-blur-md p-4 border-2 border-primary transform rotate-6 max-w-[200px] text-right rounded-xl">
+<span class="text-4xl font-black text-white block mb-1">60 <span class="text-primary">Minutes</span></span>
+<span class="text-sm font-mono text-gray-400 uppercase">Delivery</span>
+</div>
+<div class="relative">
+<img alt="Sticker" class="w-40 h-40 object-cover rounded-full border-4 border-sunshine-yellow animate-spin-slow" data-alt="Neon glitch art texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASyKx921CwnVhLql0SPIUGrIJXj7t6cn0rilWghGaSLIrdQsGKEqxoTAE9ZNPY_iDJ5e9ZkvtoL5LDUYoDAZz2iN-07tMN7Aac6V3hFkG4ZuuMuLEbIAsxql1ah9bickUntg7DMDpgfo8WV2NycdCDX6dPe0f6ZCxZN4plf33ddRgQGnOpbGoyuW08Lp6nTzGCnqomDHm774U_-NW53IQXnoBpET0qsSkxIatsyhtuOrddSepAC6GptO3TjoxsBkWioHnXKF9hHsES"/>
+<div class="absolute inset-0 flex items-center justify-center font-black text-black text-xl rotate-[-15deg] mix-blend-screen pointer-events-none">
+                            PURE<br/>CHAOS
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<section class="relative py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 relative z-10">
+<h2 class="text-6xl md:text-8xl font-black text-center mb-24 uppercase transform -rotate-2"><span class="text-white bg-black px-4">The Old Way</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-hyper-red">is Broken</span></h2>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16"><div class="group relative w-72 p-8 bg-black border-4 border-primary rounded-xl transform hover:-translate-y-2 transition-all duration-300 tilt-on-hover"><div class="text-4xl mb-4">🔄</div><h3 class="text-xl font-black uppercase mb-2 text-white">3 Hours. 5 Apps. Zero Outfits.</h3><p class="font-mono text-xs text-gray-400">Never scroll endlessly again.</p></div><div class="group relative w-72 p-8 bg-black border-4 border-sunshine-yellow rounded-xl transform hover:-translate-y-2 transition-all duration-300 tilt-on-hover mt-8 md:mt-0"><div class="text-4xl mb-4">📏</div><h3 class="text-xl font-black uppercase mb-2 text-white">Sizing Roulette?</h3><p class="font-mono text-xs text-gray-400">See it on YOUR body first.</p></div><div class="group relative w-72 p-8 bg-black border-4 border-hyper-red rounded-xl transform hover:-translate-y-2 transition-all duration-300 tilt-on-hover mt-8 md:mt-0"><div class="text-4xl mb-4">❌</div><h3 class="text-xl font-black uppercase mb-2 text-white">Fake Fashion Fears</h3><p class="font-mono text-xs text-gray-400">Verified brands only.</p></div><div class="group relative w-72 p-8 bg-black border-4 border-white rounded-xl transform hover:-translate-y-2 transition-all duration-300 tilt-on-hover mt-8 md:mt-0"><div class="text-4xl mb-4">📦</div><h3 class="text-xl font-black uppercase mb-2 text-white">7-Day Waits</h3><p class="font-mono text-xs text-gray-400">1-hour delivery reality.</p></div></div>
+</div>
+</section>
+<section class="py-24 bg-background-dark border-t-8 border-hyper-red"><div class="max-w-7xl mx-auto px-4"><h2 class="text-5xl font-black text-center mb-16 text-white">HOW IT WORKS</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="text-center"><div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-black font-black text-2xl mx-auto mb-6">1</div><h3 class="text-2xl font-bold mb-2 text-white">Your Twin in 30 Seconds</h3><p class="text-gray-400">Upload photo → AI gets your body + style.</p></div><div class="text-center"><div class="w-16 h-16 bg-hyper-red rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">2</div><h3 class="text-2xl font-bold mb-2 text-white">Outfits That Fit Your Vibe + Budget</h3><p class="text-gray-400">500+ stores scanned instantly.</p></div><div class="text-center"><div class="w-16 h-16 bg-sunshine-yellow rounded-full flex items-center justify-center text-black font-black text-2xl mx-auto mb-6">3</div><h3 class="text-2xl font-bold mb-2 text-white">Get It Today</h3><p class="text-gray-400">Pickup discount or 1-hour delivery.</p></div></div></div></section><section class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden border-t-8 border-primary" id="signup">
+<div class="absolute inset-0 opacity-20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIKyJcNHCMwHfkUF6QIesK15TIvMN6AIGiwObhXrrCb9jQBtGXsT4LIy8YZX0Q0jbqFhlq5KwSsrhUB1TwrKjvIn7fOvwXop36fTgZnaUXW5T0LNHLIIwmpd54SZmoXX2p5d2zwibrW0BUgzv3XNr_OiSfL_UM4p-nL87iYuXu8EyeJmC7GBnTzec5vLA8m3GcjCCDdb68t5XPbC1o7bYKMCYURwqf8lrxzEUkRZDlxwZ2Y3b1ny-b9xfbxtfdOPLt1f-jkMKIKxtq');"></div>
+<div class="relative z-10 w-full max-w-4xl mx-4 p-8 md:p-16 border-4 border-white bg-black/80 backdrop-blur-sm brutalist-shadow-primary transform rotate-1">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-hyper-red text-white px-8 py-2 border-4 border-black transform -rotate-2 font-black text-xl whitespace-nowrap z-20 shadow-[4px_4px_0px_#fff]">
+                    SESSION 01: LOADING...
+                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-6xl md:text-7xl font-black leading-none mb-6 text-white">Be First 1K – <span class="text-primary">Lifetime Perks Await</span></h2><p class="text-hyper-red font-bold uppercase mb-4">Launching Bangalore/Mumbai in 8 weeks.</p>
+<div class="space-y-4">
+<input class="w-full bg-transparent border-4 border-gray-700 p-4 text-white font-mono focus:border-primary focus:ring-0 placeholder-gray-600" placeholder="ENTER_EMAIL_ADDRESS" type="email"/>
+<button class="w-full bg-white text-black font-black text-xl py-4 border-4 border-transparent hover:bg-sunshine-yellow hover:border-black transition-colors uppercase tracking-widest relative overflow-hidden group">
+<span class="relative z-10">Claim My Spot</span>
+<div class="absolute inset-0 bg-primary transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 z-0"></div>
+</button>
+</div><div class="mt-12 p-6 border-2 border-dashed border-gray-700 bg-white/5"><p class="text-sm text-gray-400 mb-4">💡 Top Ideas We're Building (You Voted): Share boards with friends (68%)</p><input class="w-full bg-black/50 border-2 border-gray-800 p-3 text-white font-mono text-xs focus:border-sunshine-yellow focus:ring-0" placeholder="What feature would make you use Slay AI daily?"/><button class="w-full mt-2 bg-primary text-black font-bold text-xs py-2 uppercase hover:bg-hyper-red hover:text-white transition-colors">Send Feedback</button></div>
+</div>
+<div class="flex flex-col items-center justify-center border-4 border-dashed border-gray-800 p-8 rounded-full aspect-square relative group">
+<div class="absolute inset-0 rounded-full border-4 border-primary opacity-0 group-hover:opacity-100 animate-ping"></div>
+<span class="font-mono text-sm text-primary mb-2 text-hyper-red">SPOTS CLAIMED</span>
+<div class="text-7xl md:text-8xl font-black text-white animate-melt" style="font-family: 'Space Grotesk', sans-serif;">347</div>
+<div class="w-32 h-1 bg-gray-800 my-4" style="background-color: #FF006E;"></div>
+<span class="text-4xl font-bold text-gray-600">1000</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-dark border-t-4 border-white"><div class="max-w-4xl mx-auto px-4"><h2 class="text-3xl font-black text-white mb-10">DEEP_DIVE.EXE</h2><div class="space-y-6"><div class="border-b border-white/10 pb-4"><h4 class="text-primary font-bold mb-2">Data Safe?</h4><p class="text-gray-400 text-sm">Photos encrypted, never shared. Your twin = yours only.</p></div></div></div></section><footer class="bg-primary text-black py-12 border-t-4 border-black">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col items-center md:items-start">
+<div class="text-4xl font-black italic">SLAY_AI</div>
+<p class="font-mono text-xs font-bold mt-2 max-w-xs text-center md:text-left">The anti-generic stylist for the post-internet generation. Powered by AI. Curated by Culture.</p>
+</div>
+<div class="flex gap-6 font-bold uppercase text-sm tracking-wider">
+<a class="hover:underline decoration-4" href="#">LinkedIn</a>
+<a class="hover:underline decoration-4" href="#">X</a>
+<a class="hover:underline decoration-4" href="#">Insta</a>
+<a class="hover:underline decoration-4" href="#">Mail</a>
+<a class="hover:underline decoration-4" href="#">YouTube</a>
+</div>
+<p class="font-mono text-xs font-bold">© 2026 FLASHFUSION LABS PRIVATE LIMITED. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</div>
+<div class="fixed inset-0 pointer-events-none z-[100] opacity-[0.03] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+</body></html>
