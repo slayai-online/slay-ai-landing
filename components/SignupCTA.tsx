@@ -2,6 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import { db } from "../lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function SignupCTA() {
     const [email, setEmail] = useState("");
@@ -9,22 +11,49 @@ export default function SignupCTA() {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
     const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
 
-    function handleEmailSubmit(e: FormEvent<HTMLFormElement>) {
+    const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
+    const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
+
+    async function handleEmailSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        if (!email.trim()) return;
-        // TODO: Connect to API / Firestore
-        console.log("Waitlist signup:", email);
-        setEmailSubmitted(true);
-        setEmail("");
+        if (!email.trim() || isSubmittingEmail) return;
+
+        setIsSubmittingEmail(true);
+        try {
+            await addDoc(collection(db, "waitlist"), {
+                email: email.trim(),
+                createdAt: serverTimestamp(),
+            });
+            console.log("Waitlist signup successful:", email);
+            setEmailSubmitted(true);
+            setEmail("");
+        } catch (error) {
+            console.error("Error adding email to waitlist:", error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmittingEmail(false);
+        }
     }
 
-    function handleFeedbackSubmit(e: FormEvent<HTMLFormElement>) {
+    async function handleFeedbackSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        if (!feedback.trim()) return;
-        // TODO: Connect to API / Firestore
-        console.log("Feedback:", feedback);
-        setFeedbackSubmitted(true);
-        setFeedback("");
+        if (!feedback.trim() || isSubmittingFeedback) return;
+
+        setIsSubmittingFeedback(true);
+        try {
+            await addDoc(collection(db, "feedback"), {
+                suggestion: feedback.trim(),
+                createdAt: serverTimestamp(),
+            });
+            console.log("Feedback submitted:", feedback);
+            setFeedbackSubmitted(true);
+            setFeedback("");
+        } catch (error) {
+            console.error("Error submitting feedback:", error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmittingFeedback(false);
+        }
     }
 
     return (
@@ -94,9 +123,10 @@ export default function SignupCTA() {
                             ) : (
                                 <button
                                     type="submit"
-                                    className="w-full bg-white text-black font-black text-xl py-4 border-4 border-transparent hover:bg-sunshine-yellow hover:border-black transition-colors uppercase tracking-widest relative overflow-hidden group"
+                                    disabled={isSubmittingEmail}
+                                    className="w-full bg-white text-black font-black text-xl py-4 border-4 border-transparent hover:bg-sunshine-yellow hover:border-black transition-colors uppercase tracking-widest relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    <span className="relative z-10">Claim My Spot</span>
+                                    <span className="relative z-10">{isSubmittingEmail ? "JOINING..." : "Claim My Spot"}</span>
                                     <div className="absolute inset-0 bg-primary transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 z-0" />
                                 </button>
                             )}
@@ -127,9 +157,10 @@ export default function SignupCTA() {
                                     />
                                     <button
                                         type="submit"
-                                        className="w-full mt-2 bg-primary text-black font-bold text-xs py-2 uppercase hover:bg-hyper-red hover:text-white transition-colors"
+                                        disabled={isSubmittingFeedback}
+                                        className="w-full mt-2 bg-primary text-black font-bold text-xs py-2 uppercase hover:bg-hyper-red hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        Send Feedback
+                                        {isSubmittingFeedback ? "SENDING..." : "Send Feedback"}
                                     </button>
                                 </form>
                             )}
