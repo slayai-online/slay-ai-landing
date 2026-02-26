@@ -14,6 +14,13 @@ export default function SignupCTA() {
     const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
     const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
 
+    const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+    const showToast = (message: string) => {
+        setToastMessage(message);
+        setTimeout(() => setToastMessage(null), 5000);
+    };
+
     async function handleEmailSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if (!email.trim() || isSubmittingEmail) return;
@@ -27,6 +34,7 @@ export default function SignupCTA() {
             console.log("Waitlist signup successful:", email);
             setEmailSubmitted(true);
             setEmail("");
+            showToast("SUCCESS: You are officially on the waitlist! 🚀");
         } catch (error) {
             console.error("Error adding email to waitlist:", error);
             alert("Something went wrong. Please try again.");
@@ -48,6 +56,7 @@ export default function SignupCTA() {
             console.log("Feedback submitted:", feedback);
             setFeedbackSubmitted(true);
             setFeedback("");
+            showToast("AWESOME: Your feedback has been received! 💡");
         } catch (error) {
             console.error("Error submitting feedback:", error);
             alert("Something went wrong. Please try again.");
@@ -62,6 +71,12 @@ export default function SignupCTA() {
             className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden border-t-8 border-primary"
             aria-labelledby="signup-heading"
         >
+            {/* Global Success Toast */}
+            {toastMessage && (
+                <div role="alert" className="fixed top-8 left-1/2 -translate-x-1/2 w-11/12 max-w-md z-[100] bg-primary text-black font-black text-center px-6 py-4 border-4 border-black shadow-[4px_4px_0px_#fff] transition-all duration-300">
+                    {toastMessage}
+                </div>
+            )}
             {/* Background Image */}
             <div className="absolute inset-0 opacity-20" aria-hidden="true">
                 <Image
