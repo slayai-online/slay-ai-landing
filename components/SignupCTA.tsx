@@ -2,8 +2,9 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import { useEffect } from "react";
 import { db } from "../lib/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, doc, onSnapshot, setDoc, increment } from "firebase/firestore";
 
 export default function SignupCTA() {
     const [email, setEmail] = useState("");
@@ -15,6 +16,17 @@ export default function SignupCTA() {
     const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
 
     const [toastMessage, setToastMessage] = useState<string | null>(null);
+    const [spotsClaimed, setSpotsClaimed] = useState<number>(347); // Default base counter
+
+    useEffect(() => {
+        // Listen to the live count from Firestore
+        const unsub = onSnapshot(doc(db, "stats", "waitlist"), (snapshot) => {
+            if (snapshot.exists() && snapshot.data().count !== undefined) {
+                setSpotsClaimed(snapshot.data().count);
+            }
+        });
+        return () => unsub();
+    }, []);
 
     const showToast = (message: string) => {
         setToastMessage(message);
@@ -27,10 +39,16 @@ export default function SignupCTA() {
 
         setIsSubmittingEmail(true);
         try {
+            // 1. Add email to the waitlist collection
             await addDoc(collection(db, "waitlist"), {
                 email: email.trim(),
                 createdAt: serverTimestamp(),
             });
+
+            // 2. Increment the master counter in the stats collection
+            const statsRef = doc(db, "stats", "waitlist");
+            await setDoc(statsRef, { count: increment(1) }, { merge: true });
+
             console.log("Waitlist signup successful:", email);
             setEmailSubmitted(true);
             setEmail("");
@@ -194,8 +212,8 @@ export default function SignupCTA() {
                         <span className="font-mono text-sm text-hyper-red mb-2">
                             SPOTS CLAIMED
                         </span>
-                        <div className="text-7xl md:text-8xl font-black text-white animate-melt">
-                            347
+                        <div className="text-7xl md:text-8xl font-black text-white animate-melt tabular-nums">
+                            {spotsClaimed}
                         </div>
                         <div
                             className="w-32 h-1 my-4"
