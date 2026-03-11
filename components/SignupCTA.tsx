@@ -128,7 +128,7 @@ export default function SignupCTA() {
                             <span className="text-primary">Lifetime Perks Await</span>
                         </h2>
                         <p className="text-hyper-red font-bold uppercase mb-4">
-                            Launching Bangalore Soon.
+                            LAUNCHING IN BANGALORE SOON.
                         </p>
 
                         {/* Email Form */}
@@ -159,7 +159,7 @@ export default function SignupCTA() {
                                     disabled={isSubmittingEmail}
                                     className="w-full bg-white text-black font-black text-xl py-4 border-4 border-transparent hover:bg-sunshine-yellow hover:border-black transition-colors uppercase tracking-widest relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    <span className="relative z-10">{isSubmittingEmail ? "JOINING..." : "Claim My Spot"}</span>
+                                    <span className="relative z-10">{isSubmittingEmail ? "JOINING..." : "CLAIM MY SPOT"}</span>
                                     <div className="absolute inset-0 bg-primary transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 z-0" />
                                 </button>
                             )}
@@ -168,8 +168,8 @@ export default function SignupCTA() {
                         {/* Feedback Form */}
                         <div className="mt-12 p-6 border-2 border-dashed border-gray-700 bg-white/5">
                             <p className="text-sm text-gray-400 mb-4">
-                                💡 Got another idea that would make Slay AI part of your daily
-                                routine? Tell us what to build next.
+                                💡 Got an idea that would make Slay AI part of your daily
+                                routine? Drop it here — we&apos;re building this with the community, not in a bubble.
                             </p>
                             {feedbackSubmitted ? (
                                 <p className="text-sunshine-yellow font-bold text-center py-2">
@@ -186,14 +186,14 @@ export default function SignupCTA() {
                                         value={feedback}
                                         onChange={(e) => setFeedback(e.target.value)}
                                         className="w-full bg-black/50 border-2 border-gray-800 p-3 text-white font-mono text-xs focus:border-sunshine-yellow focus:ring-0 focus:outline-none"
-                                        placeholder="What feature would make you use Slay AI daily?"
+                                        placeholder="What feature would make you use Slay AI every week?"
                                     />
                                     <button
                                         type="submit"
                                         disabled={isSubmittingFeedback}
                                         className="w-full mt-2 bg-primary text-black font-bold text-xs py-2 uppercase hover:bg-hyper-red hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
-                                        {isSubmittingFeedback ? "SENDING..." : "Send Feedback"}
+                                        {isSubmittingFeedback ? "SENDING..." : "SEND FEEDBACK"}
                                     </button>
                                 </form>
                             )}

@@ -1,22 +1,22 @@
 const steps = [
     {
         number: 1,
-        title: "Your Twin in 30 Seconds",
-        description: "Upload photo → AI gets your body + style.",
+        title: "Build Your Style Profile",
+        description: "Upload a photo and a few basics. Slay AI understands your fit, preferences, and overall vibe.",
         bgColor: "bg-primary",
         textColor: "text-black",
     },
     {
         number: 2,
-        title: "Outfits That Fit Your Vibe + Budget",
-        description: "500+ stores scanned instantly.",
+        title: "Get Looks That Match You",
+        description: "See outfit ideas based on your body type, budget, colours, and occasion \u2014 not random catalog clutter.",
         bgColor: "bg-hyper-red",
         textColor: "text-white",
     },
     {
         number: 3,
-        title: "Get It Today",
-        description: "Pickup discount or 1-hour delivery.",
+        title: "Shop Without the Stress",
+        description: "Pick the look you like, then choose delivery or store pickup from nearby fashion stores. Easy, clean, sorted.",
         bgColor: "bg-sunshine-yellow",
         textColor: "text-black",
     },

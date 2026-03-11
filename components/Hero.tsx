@@ -52,17 +52,17 @@ export default function Hero() {
                             System Override
                         </div>
                         <h1 className="font-bold text-2xl leading-tight text-[#1A1A1D]">
-                            Stop Wasting Hours on &lsquo;What to Wear?&rsquo; – Your{" "}
-                            <span className="text-[#00D4FF]">AI Twin</span> Finds Perfect
-                            Outfits from Nearby Stores.{" "}
-                            <span className="text-[#00D4FF]">Delivered Today.</span>
+                            Done Guessing What to Wear — Your{" "}
+                            <span className="text-[#00D4FF]">Personal AI Stylist</span> Picks
+                            Outfits from Stores Near You.{" "}
+                            <span className="text-[#00D4FF]">Delivered Fast.</span>
                         </h1>
                     </div>
 
                     <p className="mt-4 text-white font-medium text-lg leading-snug text-center lg:text-left">
-                        Upload 1 photo → AI builds your digital twin → Instant try-ons from
-                        500+ local brands → 1-hour delivery or pickup. No sizing drama, no
-                        waiting.
+                        Upload 1 photo → get a style profile built for your body and vibe →
+                        discover outfits that actually suit you → choose fast delivery or
+                        store pickup. Less scrolling, more fits.
                     </p>
 
                     {/* CTA Button */}

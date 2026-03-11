@@ -18,20 +18,20 @@ const spaceGrotesk = Space_Grotesk({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://slayai.in";
 
 export const metadata: Metadata = {
-  title: "SLAY AI – Your AI Twin Finds Perfect Outfits. Delivered in 60 Minutes.",
+  title: "SLAY AI – Your Personal AI Stylist | Outfit Recommendations from Nearby Stores",
   description:
-    "Upload 1 photo, get an AI-powered digital twin, try on outfits from 500+ local stores, and get 1-hour delivery. The anti-generic AI stylist for Gen Z. Launching in Bangalore & Mumbai.",
+    "Upload a photo, get personalised outfit recommendations from nearby fashion stores in Bangalore, with fast delivery or pickup. Your AI stylist for every occasion.",
   keywords: [
     "AI stylist",
-    "virtual try-on",
-    "AI fashion",
-    "digital twin",
+    "personal styling app",
     "outfit recommendations",
-    "1-hour delivery fashion",
-    "Gen Z fashion",
+    "nearby fashion stores",
+    "fast fashion delivery",
+    "virtual outfit discovery",
+    "Bangalore fashion shopping",
+    "Gen Z fashion tech",
+    "personalised style recommendations",
     "SLAY AI",
-    "AI wardrobe",
-    "personal stylist app",
   ],
   metadataBase: new URL(siteUrl),
   alternates: {
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "SLAY AI",
-    title: "SLAY AI – Your AI Twin Finds Perfect Outfits.",
+    title: "SLAY AI – Your Personal AI Stylist for Outfits That Actually Suit You",
     description:
-      "Upload 1 photo → AI builds your digital twin → Instant try-ons from 500+ local brands → 1-hour delivery. Join 347+ people on the waitlist.",
+      "Upload a photo → get style recommendations based on your body and vibe → shop from nearby stores with fast delivery. Launching in Bangalore.",
     images: [
       {
         url: `${siteUrl}/images/hero-avatar.webp`, // Fallback since og-image.jpg may not exist
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SLAY AI – Your AI Twin Finds Perfect Outfits",
+    title: "SLAY AI – Personalised Outfit Recommendations | AI Stylist App",
     description:
-      "Upload 1 photo, try on outfits from 500+ local brands with your AI twin, and get 1-hour delivery. Launching Bangalore Soon.",
+      "Discover outfits that actually suit you from nearby fashion stores. Fast delivery or pickup. Launching in Bangalore soon.",
     creator: "@slayai",
     images: [`${siteUrl}/images/hero-avatar.webp`],
   },

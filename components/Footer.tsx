@@ -16,9 +16,9 @@ export default function Footer() {
                         SLAY_AI
                     </div>
                     <p className="font-mono text-xs font-bold mt-2 max-w-xs text-center md:text-left">
-                        The anti-generic stylist for the post internet generation.
+                        Your personal AI stylist for better outfits, less effort, and more confidence.
                         <br />
-                        Powered by AI. Curated by Culture.
+                        Powered by AI. Styled for real life.
                     </p>
                 </div>
 

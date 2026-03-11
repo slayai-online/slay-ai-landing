@@ -15,7 +15,7 @@ export default function FAQ() {
                 <div className="space-y-6">
                     <details className="group border-b border-white/10 pb-4" open>
                         <summary className="text-primary font-bold mb-2 cursor-pointer list-none flex items-center justify-between">
-                            <span>Data Safe?</span>
+                            <span>Is my data safe?</span>
                             <span
                                 className="text-gray-500 transition-transform group-open:rotate-45"
                                 aria-hidden="true"
@@ -24,7 +24,7 @@ export default function FAQ() {
                             </span>
                         </summary>
                         <p className="text-gray-400 text-sm mt-2">
-                            Photos encrypted, never shared. Your twin = yours only.
+                            Your photos and profile stay private and protected. You stay in control of what you share.
                         </p>
                     </details>
 
@@ -39,10 +39,8 @@ export default function FAQ() {
                             </span>
                         </summary>
                         <p className="text-gray-400 text-sm mt-2">
-                            Upload a single photo and SLAY AI builds your digital twin in 30
-                            seconds. The AI scans 500+ local stores to find outfits that match
-                            your body, style, and budget. Get items delivered in 1 hour or pick
-                            them up at a discount.
+                            Upload your photo, set your preferences, and let Slay AI suggest
+                            outfits based on your body, style, budget, and occasion.
                         </p>
                     </details>
 
@@ -57,9 +55,7 @@ export default function FAQ() {
                             </span>
                         </summary>
                         <p className="text-gray-400 text-sm mt-2">
-                            We&apos;re launching in Bangalore and Mumbai within 8 weeks. Join the
-                            waitlist to be among the first 1,000 users and receive lifetime
-                            perks.
+                            We&apos;re starting with Bangalore and expanding city by city.
                         </p>
                     </details>
                 </div>

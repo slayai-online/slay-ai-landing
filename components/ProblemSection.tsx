@@ -3,26 +3,26 @@ import BrutalistCard from "@/components/ui/BrutalistCard";
 const problems = [
     {
         icon: "🔄",
-        title: "3 Hours. 5 Apps. Zero Outfits.",
-        description: "Never scroll endlessly again.",
+        title: "Endless Browsing. Still No Look.",
+        description: "Get complete outfit ideas in minutes, not after checking five different apps.",
         borderColor: "border-primary",
     },
     {
         icon: "📏",
-        title: "Sizing Roulette?",
-        description: "See it on YOUR body first.",
+        title: "Will It Even Suit Me?",
+        description: "See styles picked for your body, budget, and occasion first.",
         borderColor: "border-sunshine-yellow",
     },
     {
         icon: "❌",
-        title: "Fake Fashion Fears",
-        description: "Verified brands only.",
+        title: "No More Random Picks",
+        description: "Discover outfits that feel right for you, not just what\u2019s trending.",
         borderColor: "border-hyper-red",
     },
     {
         icon: "📦",
-        title: "7-Day Waits",
-        description: "1-hour delivery reality.",
+        title: "No More Waiting Forever",
+        description: "Get your look faster when you actually need it.",
         borderColor: "border-white",
     },
 ] as const;
@@ -35,9 +35,9 @@ export default function ProblemSection() {
                     id="problem-heading"
                     className="text-4xl sm:text-6xl md:text-8xl font-black text-center mb-24 uppercase transform -rotate-2"
                 >
-                    <span className="text-white bg-black px-4">The Old Way</span>{" "}
+                    <span className="text-white bg-black px-4">Finding a Good Outfit</span>{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-hyper-red">
-                        is Broken
+                        Shouldn&apos;t Take Hours
                     </span>
                 </h2>
 
